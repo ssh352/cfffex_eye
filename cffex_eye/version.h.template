@@ -1,0 +1,6 @@
+#ifndef CFFEX_VERSION_H
+#define CFFEX_VERSION_H
+
+#define GIT_VERSION "$FULL_VERSION"
+
+#endif // CFFEX_VERSION_H

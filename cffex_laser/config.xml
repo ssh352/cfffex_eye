@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<config>
+
+    <threadNum>2</threadNum>
+    <httpAddr>tcp://0.0.0.0:2000</httpAddr>
+
+    <log>
+        <filePath>./cffex_laser.log</filePath>
+        <logLevel>debug</logLevel>
+    </log>
+
+    <service id="8005">
+        <addr>tcp://127.0.0.1:31110</addr>
+    </service>
+
+</config>

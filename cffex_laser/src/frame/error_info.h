@@ -1,0 +1,21 @@
+#ifndef ERROR_INFO_H
+#define ERROR_INFO_H
+
+enum CFFEX_LASER_ERR
+{
+    STATUS_OK = 0,
+    ERROR_BAD_REQUEST     = 100001,
+    ERROR_BAD_PARAM       = 100002,
+    ERROR_NO_REQ_SERVICE  = 100003,
+    ERROR_NO_REQ_MESSAGE  = 100004,
+    ERROR_REQ_SCHEMA      = 100005,
+    ERROR_NO_RSP_SERVICE  = 100007,
+    ERROR_NO_RSP_MESSAGE  = 100008,
+    ERROR_RSP_SCHEMA      = 100009,
+    ERROR_NO_ALIVE_SERVICE= 100010,
+    ERROR_SEND_REQUEST    = 100011,
+};
+
+const char *get_error_message(int code);
+
+#endif // ERROR_INFO_H

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config>
+    <mdbpub fromAdapter="true">
+        <!--addr>tcp://172.31.112.75:33580</addr>
+        <topic>0x1</topic-->
+        <addr>udp://127.0.0.255:10010</addr>
+        <topic>0x1101</topic>
+        <subscriberId>0x0011</subscriberId>
+        <flowPath>./</flowPath>
+    </mdbpub>
+
+    <log>
+        <filePath>./cffex_eye.log</filePath>
+        <logLevel>info</logLevel>
+    </log>
+
+    <databases thread="2" >
+        <!-- id用于插件获取特定的数据库-->
+        <!--database id="1" databaseName="oracle://riskdb" userName="surv" password="surv" /-->
+        <database id="2" databaseName="mysql://127.0.0.1@test2" userName="root" password="root@123" />
+    </databases>
+</config>

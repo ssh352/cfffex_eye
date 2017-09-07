@@ -1,0 +1,12 @@
+#在Z:\01git\02cffex_eye\cffex_eye目录下执行以下命令，在该目录生成msvc的工程目录
+
+php $HOME/01git/02cffex_eye/msvc_tool/linux_vs_generator.php --dst_dir=msvc \
+    --project=cffex_eye \
+    --source=../../../01cffex_frame/src,../src/business,../src/main,../src/classloader    \
+    --include=/usr/include,/home/cffex/local/gtest/include,/home/cffex/local/boost/include,../01cffex_frame/src,./cffex_eye/src/business   \
+    --library_dir=/usr/local/lib,/home/cffex/local/boost/lib,  \
+    --library_release=rt,pthread \
+    --library_debug=/home/cffex/local/gtest/lib/libgtest.a \
+    --macros=LINUX,TIXML_USE_STL,GCC,PTRADE_1_61  \
+    --cc_flag=-Wno-unused-function,-Wno-strict-aliasing,-fpermissive,-msse4,-std=c++0x, \
+    --link_flag=-msse4,-g,-O3,-fPIC,-Wall,-Wno-unused-function,-Wno-strict-aliasing,-fpermissive

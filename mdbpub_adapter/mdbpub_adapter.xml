@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config>
+    <mdbpub>
+        <MdbpubAddr>tcp://127.0.0.1:33580</MdbpubAddr>
+		<!--MdbpubTopic 0x1:TenlevelMarketData  0x2:MemFlow-->
+		<MdbpubTopic>0x1</MdbpubTopic>
+        <FlowPath></FlowPath>
+    </mdbpub>
+    <publish>
+        <XTPPubAddr>udp://10.0.21.255:10010</XTPPubAddr>
+        <XTPPubTopic>0x1101</XTPPubTopic>
+        <XTPPubThreadNum>1</XTPPubThreadNum>
+    </publish>
+    <log>
+        <FilePath>./log/cffex_eye.log</FilePath>
+        <LogLevel>debug</LogLevel>
+    </log>
+</config>

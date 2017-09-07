@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<service name="tlvTest" id="100">
+
+    <message name="myType">
+        <field name="param1" id="1" type="int32" />
+        <field name="param2" id="2" type="string" />
+    </message>
+
+    <message name="reqTest" id="1">
+        <field name="param1" id="1" type="int32" />
+        <field name="param2" id="2" type="string" />
+    </message>
+
+    <message name="rspTest" id="2">
+        <field name="param1" id="1" type="int32" />
+        <field name="param2" id="2" type="string" />
+        <field name="param3" id="3" type="myType" />
+        <field name="param4" id="4" type="string" array="true" />
+    </message>
+
+</service>

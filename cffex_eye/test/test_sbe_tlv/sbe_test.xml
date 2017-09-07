@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sbe:messageSchema xmlns:sbe="http"
+                   package="sbetest"
+				   id="1"
+                   version="1"
+				   semanticVersion="5.2"
+                   byteOrder="bigEndian"
+                   description="xxx">
+    <types>
+        <composite name="messageHeader" description="xxx">
+            <type name="blockLength" primitiveType="uint16"/>
+            <type name="templateId" primitiveType="uint16"/>
+            <type name="schemaId" primitiveType="uint16"/>
+            <type name="version" primitiveType="uint16"/>
+        </composite>
+        <composite name="groupSizeEncoding">
+            <type name="blockLength" primitiveType="uint16"/>
+            <type name="numInGroup" primitiveType="uint8"/>
+        </composite>
+        <composite name="varDataEncoding">
+            <type name="length" primitiveType="uint16"/>
+            <type name="varData" primitiveType="uint8" length="0" characterEncoding="UTF-8"/>
+        </composite>
+    </types>
+
+    <sbe:message name="sbetest" id="1" description="test1">
+		<field name="param1" id="1" type="int32"/>
+        <field name="param2" id="2" type="int32"/>
+        <field name="param3" id="3" type="int32"/>
+        <field name="param4" id="4" type="int32"/>
+        <field name="param5" id="5" type="double"/>
+		
+        <data name="param6" id="6" type="varDataEncoding"/>
+        <data name="param7" id="7" type="varDataEncoding"/>
+        <data name="param8" id="8" type="varDataEncoding"/>
+    </sbe:message>
+
+</sbe:messageSchema>
